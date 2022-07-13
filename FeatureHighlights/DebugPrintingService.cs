@@ -14,7 +14,7 @@ public class DebugPrintingService : IPrintingService
 
     public void Print(string text)
     {
-        Debug.Print(text);
+        Debug.WriteLine(text);
     }
 
     public void PrintMany(string separator, params string[] text)
@@ -31,5 +31,10 @@ public class DebugPrintingService : IPrintingService
         sb.AppendLine();
         sb.Append($"Printed by: { GetType().Name }: { Guid }");
         Debug.WriteLine(sb.ToString());
+    }
+
+    public void PrintCallsign()
+    {
+        Debug.WriteLine($"Printed by: { GetType().Name }: { Guid }");
     }
 }

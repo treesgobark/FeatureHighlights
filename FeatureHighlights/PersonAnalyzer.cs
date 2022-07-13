@@ -13,5 +13,6 @@ public class PersonAnalyzer : IDataAnalyzer<Person>
     {
         _printingService.Print("Person has 3 Properties:\n");
         _printingService.PrintMany("|", data.Id.ToString(), data.Name, data.Age.ToString());
+        _printingService.PrintCallsign();
     }
 }

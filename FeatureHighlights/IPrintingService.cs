@@ -14,4 +14,9 @@ public interface IPrintingService
     /// <param name="separator">The string to print between each input.</param>
     /// <param name="text">The instances of text to be printed.</param>
     void PrintMany(string separator, params string[] text);
+
+    /// <summary>
+    /// Prints identifying information for this printing service.
+    /// </summary>
+    void PrintCallsign();
 }

@@ -27,8 +27,11 @@ public class ConsolePrintingService : IPrintingService
                 sb.Append(separator);
             }
         }
-        sb.AppendLine();
-        sb.Append($"Printed by: { GetType().Name }: { Guid }");
         Console.WriteLine(sb.ToString());
+    }
+
+    public void PrintCallsign()
+    {
+        Console.WriteLine($"Printed by: { GetType().Name }: { Guid }");
     }
 }
